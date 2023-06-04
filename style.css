@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dancing Script", cursive;
+  background: linear-gradient(145deg, #af6399, #a8640b);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.card {
+  width: 480px;
+  min-height: 50vh;
+  margin: 100px auto 0;
+  perspective: 100px;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  margin: 0 10rem;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: url(image/wing-full-hd-cb-editing-blur-background-download-11663607156ffrd1j9nlt.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 200px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.front .text {
+  margin: -10rem 6rem;
+  font-size: xx-large;
+  font-style: italic;
+  color: whitesmoke;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.back {
+  width: 50%;
+  height: auto;
+  margin: -25rem 15rem;
+  transform: rotate3d(90deg);
+}
+.self {
+  width: 35%;
+  min-height: 10vh;
+}
+.word{
+  color: rgb(8, 52, 8);
+  font-size: xx-large;
+  font-weight: 700;
+  margin-left: 13rem;
+}
+
+.card :hover.title {
+  transform: rotateY(180deg);
+  transform: rotate3d(1, 1, 1, 45deg);
+}
